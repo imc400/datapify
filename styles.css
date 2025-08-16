@@ -151,7 +151,7 @@ body {
 /* Sección Héroe */
 .hero {
     background: var(--gradient-dark);
-    padding: 140px 0 80px;
+    padding: 160px 0 80px;
     position: relative;
     overflow: hidden;
 }
@@ -497,51 +497,490 @@ body {
     margin-right: auto;
 }
 
-/* --- PÁGINA CASO DE ESTUDIO --- */
+.final-cta .cta-button {
+    display: block;
+    margin: 0 auto;
+}
 
-.case-study-hero {
-    padding: 180px 0 80px;
+/* --- PÁGINA ACERCA DE --- */
+
+.about-hero {
+    padding: 140px 0 80px;
     background: var(--gradient-dark);
     color: var(--text-white);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-badge {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(0, 196, 199, 0.2);
+    border: 1px solid var(--accent-turquoise);
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--accent-turquoise);
+    backdrop-filter: blur(10px);
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.about-subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-section {
+    padding: 80px 0;
+}
+
+.origin-section {
+    background: var(--text-white);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.story-text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.story-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    opacity: 0.9;
+}
+
+.insight-box {
+    background: var(--light-bg);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border-left: 4px solid var(--accent-turquoise);
+    box-shadow: 0 10px 30px var(--shadow-soft);
+}
+
+
+.insight-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.insight-box p {
+    font-style: italic;
+    color: var(--accent-turquoise);
+    font-weight: 600;
+}
+
+.development-section {
+    background: var(--light-bg);
+}
+
+.timeline-development {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dev-timeline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.dev-step {
+    background: var(--accent-turquoise);
+    color: var(--text-white);
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-weight: 700;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 196, 199, 0.3);
+}
+
+.dev-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.dev-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.testing-section {
+    background: var(--text-white);
+}
+
+.testing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testing-phase {
+    background: var(--light-bg);
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-soft);
+}
+
+.phase-header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent-turquoise);
+}
+
+.phase-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.phase-period {
+    color: var(--accent-turquoise);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.phase-activities {
+    list-style: none;
+    padding: 0;
+}
+
+.phase-activities li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.phase-activities li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-turquoise);
+    font-weight: 700;
+}
+
+.phase-activities li:last-child {
+    border-bottom: none;
+}
+
+.launch-section {
+    background: var(--primary-dark);
+    color: var(--text-white);
+}
+
+.launch-section .section-header h2,
+.launch-section .section-subtitle {
+    color: var(--text-white);
+}
+
+.launch-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.launch-metric {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 196, 199, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.launch-metric:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 196, 199, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 196, 199, 0.2);
+}
+
+
+.launch-metric .metric-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent-turquoise);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.launch-metric .metric-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.launch-metric p {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.mission-section {
+    background: var(--light-bg);
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-item {
+    background: var(--text-white);
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px var(--shadow-soft);
+}
+
+.mission-item h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.mission-item p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    opacity: 0.9;
+}
+
+.mission-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.highlight-item {
+    padding: 15px 20px;
+    background: var(--light-bg);
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    border-left: 3px solid var(--accent-turquoise);
+}
+
+.vision-roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.roadmap-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.roadmap-item.current {
+    background: rgba(0, 196, 199, 0.1);
+    border: 1px solid var(--accent-turquoise);
+}
+
+.roadmap-item.upcoming {
+    background: var(--light-bg);
+    opacity: 0.7;
+}
+
+.roadmap-status {
+    font-size: 18px;
+    width: 30px;
+    text-align: center;
+}
+
+.team-section {
+    background: var(--text-white);
+}
+
+.founder-profile {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.founder-content h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.founder-title {
+    font-size: 20px;
+    color: var(--accent-turquoise);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.founder-bio {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+    opacity: 0.9;
+}
+
+.founder-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background: var(--light-bg);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.founder-stat {
+    text-align: center;
+}
+
+.founder-stat .stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-turquoise);
+    margin-bottom: 8px;
+}
+
+.founder-stat .stat-label {
+    font-size: 14px;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+/* --- PÁGINA CASO DE ESTUDIO --- */
+
+.challenge-section {
+    background: var(--light-bg);
+}
+
+.solution-section {
+    background: var(--text-white);
+}
+
+.results-section {
+    background: var(--primary-dark);
+    color: var(--text-white);
+}
+
+.results-section .section-header h2,
+.results-section .section-subtitle {
+    color: var(--text-white);
+}
+
+.case-study-hero {
+    padding: 140px 0 80px;
+    background: var(--gradient-dark);
+    color: var(--text-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .case-study-badge {
     display: inline-block;
-    padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    padding: 10px 24px;
+    background: rgba(0, 196, 199, 0.2);
+    border: 1px solid var(--accent-turquoise);
+    border-radius: 25px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: var(--accent-turquoise);
+    backdrop-filter: blur(10px);
 }
 
 .case-title {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.2;
 }
 
 .case-subtitle {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto 40px;
+    font-size: 20px;
+    max-width: 750px;
+    margin: 0 auto 50px;
     opacity: 0.9;
+    line-height: 1.5;
 }
 
 .case-study-metrics {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    margin-top: 60px;
 }
 
 .metric-highlight {
-    background: rgba(0, 196, 199, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--accent-turquoise);
-    border-radius: 12px;
-    padding: 20px;
-    min-width: 220px;
-    flex-basis: 220px;
+    border-radius: 20px;
+    padding: 30px 25px;
+    min-width: 240px;
+    flex-basis: 240px;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+}
+
+.metric-highlight:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 196, 199, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 196, 199, 0.3);
 }
 
 .metric-value {
@@ -600,20 +1039,37 @@ body {
 .challenge-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .challenge-item {
-    background: var(--light-bg);
-    padding: 30px;
-    border-radius: 15px;
+    background: var(--text-white);
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-soft);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-turquoise);
+}
+
+.challenge-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .challenge-number {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
-    color: var(--accent-turquoise);
-    margin-bottom: 15px;
+    color: var(--text-white);
+    background: var(--accent-turquoise);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .solution-timeline {
@@ -629,8 +1085,8 @@ body {
 }
 
 .timeline-step {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: var(--accent-turquoise);
     color: white;
@@ -639,19 +1095,29 @@ body {
     justify-content: center;
     font-weight: 700;
     flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0, 196, 199, 0.3);
 }
 
 .results-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .result-card {
-    background: var(--light-bg);
-    padding: 40px;
-    border-radius: 15px;
+    background: var(--text-white);
+    padding: 45px 35px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 10px 30px var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .result-card.primary {
@@ -659,9 +1125,24 @@ body {
     color: var(--text-white);
 }
 
+.results-section .result-card {
+    background: var(--text-white);
+    color: var(--text-dark);
+}
+
+.results-section .result-card.primary {
+    background: var(--accent-turquoise);
+    color: var(--text-white);
+}
+
 .result-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .result-value {
@@ -671,7 +1152,15 @@ body {
 }
 
 .result-card.primary .result-value {
+    color: var(--text-white);
+}
+
+.results-section .result-value {
     color: var(--accent-turquoise);
+}
+
+.results-section .result-card.primary .result-value {
+    color: var(--text-white);
 }
 
 .testimonial-spotlight {
@@ -1338,14 +1827,13 @@ body {
     transform: translateY(0);
 }
 
-/* Estados de carga */
-body.loaded {
-    animation: fadeInBody 0.5s ease-in;
+/* Estados de carga - Eliminar flash */
+body {
+    opacity: 1;
 }
 
-@keyframes fadeInBody {
-    from { opacity: 0; }
-    to { opacity: 1; }
+body.loaded {
+    opacity: 1;
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -1395,7 +1883,10 @@ body.loaded {
         grid-template-columns: 1fr 1fr;
     }
 
-    .discovery-cards {
+    .discovery-cards,
+    .testing-grid,
+    .mission-content,
+    .launch-metrics {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -1404,6 +1895,17 @@ body.loaded {
     .pricing-cards {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .founder-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
@@ -1438,7 +1940,11 @@ body.loaded {
         display: block;
     }
 
-    .logos-container,
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
     .clients-stats,
     .testimonials-grid,
     .discovery-cards,
@@ -1446,13 +1952,21 @@ body.loaded {
     .challenge-grid,
     .company-stats,
     .pricing-cards,
-    .footer-content,
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-
     .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .link-group {
+        width: 100%;
     }
 
     .form-row {
