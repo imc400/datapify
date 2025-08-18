@@ -406,5 +406,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality
     initModalFunctionality();
     
+    // Remove any emojis from result icons
+    function removeResultEmojis() {
+        const resultIcons = document.querySelectorAll('.result-icon');
+        resultIcons.forEach(icon => {
+            icon.innerHTML = '';
+            icon.textContent = '';
+            icon.style.display = 'none';
+        });
+    }
+    
+    // Run emoji removal after page load and periodically
+    removeResultEmojis();
+    setTimeout(removeResultEmojis, 1000);
+    setTimeout(removeResultEmojis, 2000);
+    
     console.log('Datapify website loaded successfully!');
 });
