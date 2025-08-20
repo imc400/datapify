@@ -285,6 +285,192 @@
         </div>
     </footer>
 
+    <!-- Modal de Formulario de Calificación -->
+    <div id="qualification-modal-case" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>¿Calificas para Datapify?</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-subtitle">Completa estos datos para verificar si podemos ayudarte</p>
+                
+                <form id="qualification-form-case" class="qualification-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Número de teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Página web de tu tienda</label>
+                        <input type="text" id="website" name="website" placeholder="tutienda.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="radio-label">¿Tu tienda está en Shopify?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="shopify" value="si" required>
+                                <span class="radio-custom"></span>
+                                Sí, mi tienda está en Shopify
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="shopify" value="no" required>
+                                <span class="radio-custom"></span>
+                                No, uso otra plataforma
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="form-submit-btn">Verificar Elegibilidad</button>
+                </form>
+                
+                <!-- Mensaje para no-Shopify -->
+                <div id="no-shopify-message-case" class="message-container" style="display: none;">
+                    <div class="message-icon">⚠️</div>
+                    <h4>Lo sentimos</h4>
+                    <p>Actualmente solo tenemos integración con Shopify. Estamos trabajando en agregar más plataformas muy pronto.</p>
+                    <p><strong>¿Quieres migrar a Shopify?</strong> Te podemos ayudar con el proceso.</p>
+                    <button class="secondary-btn" onclick="closeModalCase()">Entendido</button>
+                </div>
+                
+                <!-- Mensaje de éxito -->
+                <div id="success-message-case" class="message-container" style="display: none;">
+                    <div class="message-icon">🎉</div>
+                    <h4>¡Perfecto! Calificas para Datapify</h4>
+                    <p>Tu tienda en Shopify es compatible con nuestra plataforma. Te redirigiremos a nuestro calendario para que reserves tu demo personalizada.</p>
+                    <button id="go-to-calendar-case" class="form-submit-btn">Reservar mi Demo Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Modal functionality específico para caso-estudio.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('qualification-modal-case');
+            const form = document.getElementById('qualification-form-case');
+            const closeBtn = modal.querySelector('.close-modal');
+            const noShopifyMessage = document.getElementById('no-shopify-message-case');
+            const successMessage = document.getElementById('success-message-case');
+            const goToCalendarBtn = document.getElementById('go-to-calendar-case');
+            
+            // Abrir modal
+            function openModal() {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Cerrar modal
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                
+                // Reset form and messages
+                form.style.display = 'flex';
+                noShopifyMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+                form.reset();
+            }
+            
+            // Event listeners para abrir modal (solo los botones de esta página)
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openModal();
+                });
+            });
+            
+            // Event listener para cerrar modal
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Cerrar modal al hacer click fuera
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Cerrar modal con tecla Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+            
+            // Handle form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const shopifyValue = formData.get('shopify');
+                
+                // Preparar datos para Google Sheet
+                const data = {
+                    nombre: formData.get('nombre'),
+                    apellido: formData.get('apellido'),
+                    correo: formData.get('correo'),
+                    telefono: formData.get('telefono'),
+                    website: formData.get('website'),
+                    shopify: shopifyValue
+                };
+                
+                // Enviar a Google Apps Script
+                fetch('https://script.google.com/macros/s/AKfycbxIdqfa9cK6zRu_w1kuO-bXFecnVpjaqEostL7n8PPJcBmXUUxZMBELCXoSLxLKgRZ_/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    console.log('Datos enviados exitosamente a Google Sheet');
+                })
+                .catch(error => {
+                    console.error('Error enviando datos:', error);
+                });
+                
+                // Hide form
+                form.style.display = 'none';
+                
+                if (shopifyValue === 'si') {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                } else {
+                    // Show no-Shopify message
+                    noShopifyMessage.style.display = 'block';
+                }
+            });
+            
+            // Redirect to Calendly
+            goToCalendarBtn.addEventListener('click', function() {
+                window.open('https://calendar.app.google/kp98Sdw9zs11SH326', '_blank');
+                closeModal();
+            });
+            
+            // Hacer closeModal accesible globalmente para esta página
+            window.closeModalCase = closeModal;
+        });
+    </script></script>
 </body>
 </html>
