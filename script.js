@@ -357,6 +357,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (shopifyValue === 'si') {
                 // Show success message
                 successMessage.style.display = 'block';
+                
+                // Disparar evento Lead de Meta Pixel
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Demo Request - Shopify Qualified',
+                        value: 199, // Valor aproximado del plan
+                        currency: 'USD'
+                    });
+                }
             } else {
                 // Show no-Shopify message
                 noShopifyMessage.style.display = 'block';
