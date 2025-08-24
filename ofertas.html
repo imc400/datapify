@@ -38,14 +38,32 @@
     <!-- End Meta Pixel Code -->
     
     <style>
+        /* Variables CSS - Paleta de colores Datapify */
+        :root {
+            /* Colores principales */
+            --primary-dark: #061E34;
+            --accent-turquoise: #00C4C7;
+            --light-bg: #F1FBFC;
+            --text-white: #FFFFFF;
+            --text-dark: #052E4F;
+            --shadow-soft: rgba(0, 0, 0, 0.1);
+            --gradient-dark: linear-gradient(135deg, #061E34 0%, #0a2a47 100%);
+            
+            /* Variables faltantes identificadas */
+            --surface-dark: #0f1419;
+            --accent-color: var(--accent-turquoise);
+            --text-light: rgba(255, 255, 255, 0.9);
+            --text-muted: rgba(255, 255, 255, 0.6);
+        }
+        
         .ofertas-container {
             margin-top: 100px;
             font-family: 'Inter', sans-serif;
         }
         
         .hero-ofertas {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--gradient-dark);
+            color: var(--text-white);
             padding: 80px 20px;
             text-align: center;
         }
@@ -72,11 +90,12 @@
         }
         
         .badge {
-            background: rgba(255,255,255,0.2);
+            background: rgba(0, 196, 199, 0.2);
             backdrop-filter: blur(10px);
             padding: 0.5rem 1rem;
             border-radius: 25px;
             font-size: 0.9rem;
+            border: 1px solid var(--accent-turquoise);
         }
         
         .section-content {
@@ -112,7 +131,7 @@
         }
         
         .plan-card.popular {
-            border-color: #667eea;
+            border-color: var(--accent-turquoise);
             transform: scale(1.05);
         }
         
@@ -121,8 +140,8 @@
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: #667eea;
-            color: white;
+            background: var(--accent-turquoise);
+            color: var(--primary-dark);
             padding: 0.5rem 1.5rem;
             border-radius: 25px;
             font-size: 0.85rem;
@@ -133,13 +152,13 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--text-dark);
         }
         
         .plan-price {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #667eea;
+            color: var(--accent-turquoise);
             margin-bottom: 0.5rem;
         }
         
@@ -180,8 +199,8 @@
         
         .cta-primary {
             width: 100%;
-            background: #667eea;
-            color: white;
+            background: var(--accent-turquoise);
+            color: var(--primary-dark);
             border: none;
             padding: 1rem;
             border-radius: 8px;
@@ -192,15 +211,15 @@
         }
         
         .cta-primary:hover {
-            background: #5a67d8;
+            background: #00a6a9;
             transform: translateY(-1px);
         }
         
         .cta-secondary {
             width: 100%;
             background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
+            color: var(--accent-turquoise);
+            border: 2px solid var(--accent-turquoise);
             padding: 1rem;
             border-radius: 8px;
             font-weight: 600;
@@ -209,8 +228,8 @@
         }
         
         .cta-secondary:hover {
-            background: #667eea;
-            color: white;
+            background: var(--accent-turquoise);
+            color: var(--primary-dark);
         }
         
         .plan-note {
@@ -221,7 +240,7 @@
         }
         
         .help-section {
-            background: white;
+            background: var(--text-white);
         }
         
         .help-grid {
@@ -239,13 +258,13 @@
         .help-icon {
             width: 60px;
             height: 60px;
-            background: #667eea;
+            background: var(--accent-turquoise);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem auto;
-            color: white;
+            color: var(--primary-dark);
             font-size: 1.5rem;
         }
         
@@ -265,7 +284,7 @@
         
         .testimonial-quote {
             font-size: 2rem;
-            color: #667eea;
+            color: var(--accent-turquoise);
             margin-bottom: 1rem;
         }
         
@@ -306,8 +325,8 @@
         }
         
         .final-cta {
-            background: #667eea;
-            color: white;
+            background: var(--primary-dark);
+            color: var(--text-white);
             text-align: center;
         }
         
@@ -332,8 +351,8 @@
         }
         
         .btn-white {
-            background: white;
-            color: #667eea;
+            background: var(--accent-turquoise);
+            color: var(--primary-dark);
             padding: 1rem 2rem;
             border: none;
             border-radius: 8px;
@@ -354,8 +373,8 @@
         }
         
         .btn-outline:hover {
-            background: white;
-            color: #667eea;
+            background: var(--text-white);
+            color: var(--primary-dark);
         }
         
         .modal {
@@ -396,7 +415,7 @@
         .modal-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #333;
+            color: var(--text-dark);
         }
         
         .modal-close {
@@ -430,7 +449,7 @@
         }
         
         .comparison-table .highlight {
-            background: #f0f4ff;
+            background: var(--light-bg);
         }
         
         .presentation-mode {
@@ -592,7 +611,7 @@
                         <div class="plan-title">Anual Escala+ (recomendado)</div>
                         <div class="plan-price">$1.990 <span style="font-size: 1rem; color: #666;">USD</span></div>
                         <div class="plan-price-note">por año</div>
-                        <div style="color: #10b981; font-weight: 600; margin-bottom: 1rem;">2 meses de regalo • ~$166/mes</div>
+                        <div style="color: var(--accent-turquoise); font-weight: 600; margin-bottom: 1rem;">2 meses de regalo • ~$166/mes</div>
                         <div class="plan-description">Todo lo del mensual + un stack completo de crecimiento para 12 meses.</div>
                         
                         <ul class="plan-features">
@@ -819,36 +838,41 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Datapify</h3>
-                <p>Supercarga tu marketing con IA y automatización inteligente.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo_Datapify-removebg-preview.png" alt="Datapify" class="logo-img">
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Producto</h4>
+                        <ul>
+                            <li><a href="#advantages">Características</a></li>
+                            <li><a href="#pricing">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="acerca.html">Acerca de</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="afiliados.html">Afiliados</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacidad.html">Política de Privacidad</a></li>
+                            <li><a href="terminos.html">Términos de Uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="caso-estudio.html">Caso de Estudio</a></li>
-                    <li><a href="acerca.html">Acerca de</a></li>
-                    <li><a href="afiliados.html">Afiliados</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Datapify. Todos los derechos reservados.</p>
             </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacidad.html">Política de Privacidad</a></li>
-                    <li><a href="terminos.html">Términos de Servicio</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>Email: hola@datapify.com</p>
-                <p>WhatsApp: +56 9 1234 5678</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Datapify. Todos los derechos reservados.</p>
         </div>
     </footer>
     
