@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Datapify - Escala tu Shopify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Toggle Modo Presentación -->
+    <div class="fixed top-4 right-4 z-50">
+        <button onclick="togglePresentationMode()" 
+                class="bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg text-sm hover:bg-gray-700 transition-colors">
+            Modo Presentación
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Ofertas Datapify para escalar tu Shopify
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+                Elige tu forma de empezar: prueba gratis, mensual con bonos o anual 'escala+' con todo incluido.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 text-sm">
+                <span class="bg-blue-500/30 backdrop-blur px-4 py-2 rounded-full">Meta Ads</span>
+                <span class="bg-blue-500/30 backdrop-blur px-4 py-2 rounded-full">WhatsApp</span>
+                <span class="bg-blue-500/30 backdrop-blur px-4 py-2 rounded-full">Segmentos inteligentes</span>
+                <span class="bg-blue-500/30 backdrop-blur px-4 py-2 rounded-full">Shopify</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo te ayudamos -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Cómo te ayudamos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <p class="text-lg">Más ventas, menos fricción: campañas listas y guía experta.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-lg">Shopify + Meta + WhatsApp: todo integrado, en un solo lugar.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <p class="text-lg">De prueba a escala: empieza en minutos, optimiza cada mes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Elige tu plan</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Plan 1: Prueba 14 días -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Prueba 14 días</h3>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">$0</div>
+                        <p class="text-gray-600">Paga $0 ahora</p>
+                        <p class="text-sm text-gray-500 mt-2">Prueba completa por 14 días. Contratas solo si te convence.</p>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Acceso a Datapify por 14 días (Shopify + Meta Ads + Dashboard + Segmentos inteligentes)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Integración WhatsApp API (limitada a prueba si aplica)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Soporte durante el onboarding
+                        </li>
+                    </ul>
+                    
+                    <div class="space-y-3">
+                        <button data-plan="trial" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Elegir este plan
+                        </button>
+                        <button class="w-full border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Agendar una demo
+                        </button>
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-4 text-center">No requiere tarjeta para comenzar</p>
+                </div>
+
+                <!-- Plan 2: Mensual con Bonos -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Mensual con Bonos</h3>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">$199 <span class="text-lg text-gray-600">USD</span></div>
+                        <p class="text-gray-600">por mes</p>
+                        <p class="text-sm text-gray-500 mt-2">Activa hoy y acelera con bonos prácticos para vender más.</p>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Todo lo del plan anterior
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Módulo de WhatsApp Marketing de regalo
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Análisis CRO de tu sitio (reporte accionable)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Curso gratuito de Google Ads para E-Commerce
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Soporte técnico y soporte de marketing
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Ayuda para crear tus anuncios
+                        </li>
+                    </ul>
+                    
+                    <div class="space-y-3">
+                        <button data-plan="monthly" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Empezar por $199
+                        </button>
+                        <button onclick="openCourseModal()" class="w-full border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Ver temario del curso
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Plan 3: Anual Escala+ -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-blue-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Más popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Anual Escala+ (recomendado)</h3>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">$1.990 <span class="text-lg text-gray-600">USD</span></div>
+                        <p class="text-gray-600">por año</p>
+                        <p class="text-sm text-green-600 font-semibold">2 meses de regalo • ~$166/mes</p>
+                        <p class="text-sm text-gray-500 mt-2">Todo lo del mensual + un stack completo de crecimiento para 12 meses.</p>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Todo lo del plan mensual con bonos
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Theme Pro de Shopify (licencia incluida)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Curso gratuito de Optimización Web (CRO)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Tutorial completo del Theme
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Curso Pro de Google Ads (nivel avanzado)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            1 consultoría mensual con Paid Media Manager
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Flujos de WhatsApp hechos por nosotros
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Soporte prioritario
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Configuración inicial completa
+                        </li>
+                    </ul>
+                    
+                    <div class="space-y-3">
+                        <button data-plan="annual" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Quiero el Anual Escala+
+                        </button>
+                        <button onclick="openComparisonModal()" class="w-full border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Comparar planes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Aumentamos las ventas 40% en el primer mes. La integración con WhatsApp fue clave para nuestros clientes."</p>
+                    <div class="font-semibold">María González</div>
+                    <div class="text-sm text-gray-500">Fundadora, BellezaNatural</div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Los segmentos inteligentes nos ayudaron a personalizar nuestras campañas. ROI increíble."</p>
+                    <div class="font-semibold">Carlos Mendoza</div>
+                    <div class="text-sm text-gray-500">CMO, TechGadgets</div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-4">"El soporte es excelente y las consultorías mensuales nos han dado una ventaja competitiva clara."</p>
+                    <div class="font-semibold">Ana Ruiz</div>
+                    <div class="text-sm text-gray-500">Directora, ModaUrbana</div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 text-center mt-8">Resultados típicos varían según industria y ticket promedio.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">¿Cómo funciona la prueba?</h3>
+                    <p class="text-gray-600">Accedes inmediatamente a toda la plataforma por 14 días. No necesitas tarjeta de crédito. Si decides continuar, eliges tu plan al finalizar la prueba.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">¿Qué incluye el soporte prioritario?</h3>
+                    <p class="text-gray-600">Respuesta en menos de 4 horas, acceso directo a especialistas, y soporte tanto técnico como estratégico para optimizar tus campañas.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">¿Puedo cambiar de plan luego?</h3>
+                    <p class="text-gray-600">Sí, puedes actualizar tu plan en cualquier momento. Si cambias de mensual a anual, se prorratea el tiempo restante.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">¿Qué tan rápido puedo lanzar campañas?</h3>
+                    <p class="text-gray-600">Con nuestro setup inicial, puedes tener tus primeras campañas corriendo en 24-48 horas. Incluye configuración técnica y estrategia inicial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 px-4 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Ahorra ~$398 vs mensual + stack de bonos pro</h2>
+            <p class="text-xl text-blue-100 mb-8">El plan anual te da acceso completo a herramientas premium y consultoría especializada.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <button data-plan="annual" class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+                    Quiero el Anual Escala+
+                </button>
+                <button class="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+                    Agendar demo
+                </button>
+            </div>
+            
+            <p class="text-sm text-blue-200">No ofrecemos devoluciones de dinero.</p>
+        </div>
+    </section>
+
+    <!-- Modales -->
+    <!-- Modal Comparación -->
+    <div id="comparisonModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold">Comparar Planes</h3>
+                        <button onclick="closeComparisonModal()" class="text-gray-500 hover:text-gray-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-3 px-4">Funciones</th>
+                                    <th class="text-center py-3 px-4">Prueba 14 días</th>
+                                    <th class="text-center py-3 px-4">Mensual con Bonos</th>
+                                    <th class="text-center py-3 px-4 bg-blue-50">Anual Escala+</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4 font-semibold">Precio</td>
+                                    <td class="text-center py-3 px-4">$0</td>
+                                    <td class="text-center py-3 px-4">$199/mes</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">$1,990/año</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Shopify + Meta Ads + Dashboard</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Segmentos inteligentes</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">WhatsApp API</td>
+                                    <td class="text-center py-3 px-4">Limitado</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Módulo WhatsApp Marketing</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Análisis CRO</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4">✓</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Curso Google Ads</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4">Básico</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">Básico + Pro</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Theme Pro Shopify</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Consultoría mensual</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Flujos WhatsApp hechos</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4">—</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">✓</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Soporte</td>
+                                    <td class="text-center py-3 px-4">Onboarding</td>
+                                    <td class="text-center py-3 px-4">Estándar</td>
+                                    <td class="text-center py-3 px-4 bg-blue-50">Prioritario</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-6 text-center">No ofrecemos devoluciones de dinero.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Curso -->
+    <div id="courseModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold">Temario del Curso Google Ads</h3>
+                        <button onclick="closeCourseModal()" class="text-gray-500 hover:text-gray-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">Curso Básico (Plan Mensual)</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Fundamentos de Google Ads para E-Commerce</li>
+                                <li>• Configuración de campañas de búsqueda</li>
+                                <li>• Investigación de palabras clave</li>
+                                <li>• Estructuración de grupos de anuncios</li>
+                                <li>• Configuración de conversiones</li>
+                                <li>• Optimización básica de campañas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t pt-6">
+                            <h4 class="font-bold text-lg mb-3">Curso Pro (Plan Anual) - Incluye todo lo anterior más:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Campañas de Shopping avanzadas</li>
+                                <li>• Estrategias de remarketing</li>
+                                <li>• Campañas de Display y YouTube</li>
+                                <li>• Automatización y scripts</li>
+                                <li>• Análisis avanzado y atribución</li>
+                                <li>• Integración con Google Analytics 4</li>
+                                <li>• Optimización para móviles</li>
+                                <li>• Estrategias de licitación inteligente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePresentationMode() {
+            const html = document.documentElement;
+            html.classList.toggle('presentation-mode');
+        }
+
+        function openComparisonModal() {
+            document.getElementById('comparisonModal').classList.remove('hidden');
+        }
+
+        function closeComparisonModal() {
+            document.getElementById('comparisonModal').classList.add('hidden');
+        }
+
+        function openCourseModal() {
+            document.getElementById('courseModal').classList.remove('hidden');
+        }
+
+        function closeCourseModal() {
+            document.getElementById('courseModal').classList.add('hidden');
+        }
+
+        // Cerrar modales al hacer clic fuera
+        document.getElementById('comparisonModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeComparisonModal();
+            }
+        });
+
+        document.getElementById('courseModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCourseModal();
+            }
+        });
+
+        // Manejo de CTAs (placeholder para futura integración)
+        document.querySelectorAll('[data-plan]').forEach(button => {
+            button.addEventListener('click', function() {
+                const plan = this.getAttribute('data-plan');
+                console.log('Plan seleccionado:', plan);
+                // Aquí se integraría con el sistema de checkout
+            });
+        });
+    </script>
+
+    <style>
+        .presentation-mode {
+            font-size: 1.125rem !important;
+        }
+        
+        .presentation-mode * {
+            line-height: 1.8 !important;
+        }
+        
+        .presentation-mode .max-w-6xl,
+        .presentation-mode .max-w-7xl,
+        .presentation-mode .max-w-4xl {
+            max-width: 1280px !important;
+        }
+        
+        .presentation-mode section {
+            padding-top: 5rem !important;
+            padding-bottom: 5rem !important;
+        }
+        
+        .presentation-mode .gap-8 {
+            gap: 3rem !important;
+        }
+        
+        .presentation-mode .space-y-3 > * + * {
+            margin-top: 1rem !important;
+        }
+        
+        .presentation-mode .space-y-6 > * + * {
+            margin-top: 2rem !important;
+        }
+    </style>
+</body>
+</html>
