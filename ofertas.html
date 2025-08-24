@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Datapify - Escala tu Shopify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7VZNHRT3K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M7VZNHRT3K');
+    </script>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '734390922743895');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=734390922743895&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        .ofertas-container {
+            margin-top: 100px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-ofertas {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero-ofertas h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero-ofertas p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-spacer {
+            padding: 60px 0;
+        }
+        
+        .planes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .plan-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .plan-card.popular {
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .plan-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .plan-price-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .plan-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+        
+        .plan-features li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .plan-features li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+        
+        .cta-primary {
+            width: 100%;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .cta-secondary {
+            width: 100%;
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .plan-note {
+            font-size: 0.75rem;
+            color: #999;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .help-section {
+            background: white;
+        }
+        
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .help-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .help-icon {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #999;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .faq-answer {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .final-cta {
+            background: #667eea;
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .final-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-white {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal.show {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .comparison-table .highlight {
+            background: #f0f4ff;
+        }
+        
+        .presentation-mode {
+            font-size: 1.2em !important;
+        }
+        
+        .presentation-mode * {
+            line-height: 1.8 !important;
+        }
+        
+        .presentation-mode .section-spacer {
+            padding: 100px 0 !important;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-ofertas h1 {
+                font-size: 2rem;
+            }
+            
+            .planes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .plan-card.popular {
+                transform: none;
+            }
+            
+            .final-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-white,
+            .btn-outline {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado Fijo -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo_Datapify-removebg-preview.png" alt="Datapify" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="caso-estudio.html" class="nav-link">Caso de Estudio</a></li>
+                <li><a href="acerca.html" class="nav-link">Acerca de</a></li>
+                <li><a href="afiliados.html" class="nav-link">Afiliados</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="ofertas.html" class="nav-link active">Ofertas</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Toggle Modo Presentación -->
+    <div style="position: fixed; top: 120px; right: 20px; z-index: 100;">
+        <button onclick="togglePresentationMode()" 
+                style="background: #333; color: white; padding: 10px 15px; border-radius: 8px; border: none; cursor: pointer; font-size: 0.85rem;">
+            Modo Presentación
+        </button>
+    </div>
+
+    <div class="ofertas-container">
+        <!-- Hero Section -->
+        <section class="hero-ofertas">
+            <div class="section-content">
+                <h1>Ofertas Datapify para escalar tu Shopify</h1>
+                <p>Elige tu forma de empezar: prueba gratis, mensual con bonos o anual 'escala+' con todo incluido.</p>
+                <div class="badges">
+                    <span class="badge">Meta Ads</span>
+                    <span class="badge">WhatsApp</span>
+                    <span class="badge">Segmentos inteligentes</span>
+                    <span class="badge">Shopify</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo te ayudamos -->
+        <section class="help-section section-spacer">
+            <div class="section-content">
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Cómo te ayudamos</h2>
+                <div class="help-grid">
+                    <div class="help-item">
+                        <div class="help-icon">📈</div>
+                        <p style="font-size: 1.1rem;">Más ventas, menos fricción: campañas listas y guía experta.</p>
+                    </div>
+                    <div class="help-item">
+                        <div class="help-icon">🔗</div>
+                        <p style="font-size: 1.1rem;">Shopify + Meta + WhatsApp: todo integrado, en un solo lugar.</p>
+                    </div>
+                    <div class="help-item">
+                        <div class="help-icon">🚀</div>
+                        <p style="font-size: 1.1rem;">De prueba a escala: empieza en minutos, optimiza cada mes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes -->
+        <section class="section-spacer" style="background: #f8f9fa;">
+            <div class="section-content">
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">Elige tu plan</h2>
+                
+                <div class="planes-grid">
+                    <!-- Plan 1: Prueba 14 días -->
+                    <div class="plan-card">
+                        <div class="plan-title">Prueba 14 días</div>
+                        <div class="plan-price">$0</div>
+                        <div class="plan-price-note">Paga $0 ahora</div>
+                        <div class="plan-description">Prueba completa por 14 días. Contratas solo si te convence.</div>
+                        
+                        <ul class="plan-features">
+                            <li>Acceso a Datapify por 14 días (Shopify + Meta Ads + Dashboard + Segmentos inteligentes)</li>
+                            <li>Integración WhatsApp API (limitada a prueba si aplica)</li>
+                            <li>Soporte durante el onboarding</li>
+                        </ul>
+                        
+                        <button class="cta-primary" data-plan="trial">Elegir este plan</button>
+                        <button class="cta-secondary">Agendar una demo</button>
+                        
+                        <div class="plan-note">No requiere tarjeta para comenzar</div>
+                    </div>
+
+                    <!-- Plan 2: Mensual con Bonos -->
+                    <div class="plan-card">
+                        <div class="plan-title">Mensual con Bonos</div>
+                        <div class="plan-price">$199 <span style="font-size: 1rem; color: #666;">USD</span></div>
+                        <div class="plan-price-note">por mes</div>
+                        <div class="plan-description">Activa hoy y acelera con bonos prácticos para vender más.</div>
+                        
+                        <ul class="plan-features">
+                            <li>Todo lo del plan anterior</li>
+                            <li>Módulo de WhatsApp Marketing de regalo</li>
+                            <li>Análisis CRO de tu sitio (reporte accionable)</li>
+                            <li>Curso gratuito de Google Ads para E-Commerce</li>
+                            <li>Soporte técnico y soporte de marketing</li>
+                            <li>Ayuda para crear tus anuncios</li>
+                        </ul>
+                        
+                        <button class="cta-primary" data-plan="monthly">Empezar por $199</button>
+                        <button class="cta-secondary" onclick="openCourseModal()">Ver temario del curso</button>
+                    </div>
+
+                    <!-- Plan 3: Anual Escala+ -->
+                    <div class="plan-card popular">
+                        <div class="popular-badge">Más popular</div>
+                        <div class="plan-title">Anual Escala+ (recomendado)</div>
+                        <div class="plan-price">$1.990 <span style="font-size: 1rem; color: #666;">USD</span></div>
+                        <div class="plan-price-note">por año</div>
+                        <div style="color: #10b981; font-weight: 600; margin-bottom: 1rem;">2 meses de regalo • ~$166/mes</div>
+                        <div class="plan-description">Todo lo del mensual + un stack completo de crecimiento para 12 meses.</div>
+                        
+                        <ul class="plan-features">
+                            <li>Todo lo del plan mensual con bonos</li>
+                            <li>Theme Pro de Shopify (licencia incluida)</li>
+                            <li>Curso gratuito de Optimización Web (CRO)</li>
+                            <li>Tutorial completo del Theme</li>
+                            <li>Curso Pro de Google Ads (nivel avanzado)</li>
+                            <li>1 consultoría mensual con Paid Media Manager</li>
+                            <li>Flujos de WhatsApp hechos por nosotros</li>
+                            <li>Soporte prioritario</li>
+                            <li>Configuración inicial completa</li>
+                        </ul>
+                        
+                        <button class="cta-primary" data-plan="annual">Quiero el Anual Escala+</button>
+                        <button class="cta-secondary" onclick="openComparisonModal()">Comparar planes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-spacer" style="background: white;">
+            <div class="section-content">
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">Lo que dicen nuestros clientes</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <div class="testimonial-text">Aumentamos las ventas 40% en el primer mes. La integración con WhatsApp fue clave para nuestros clientes.</div>
+                        <div class="testimonial-author">María González</div>
+                        <div class="testimonial-role">Fundadora, BellezaNatural</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <div class="testimonial-text">Los segmentos inteligentes nos ayudaron a personalizar nuestras campañas. ROI increíble.</div>
+                        <div class="testimonial-author">Carlos Mendoza</div>
+                        <div class="testimonial-role">CMO, TechGadgets</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <div class="testimonial-text">El soporte es excelente y las consultorías mensuales nos han dado una ventaja competitiva clara.</div>
+                        <div class="testimonial-author">Ana Ruiz</div>
+                        <div class="testimonial-role">Directora, ModaUrbana</div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #999; font-size: 0.9rem; margin-top: 2rem;">Resultados típicos varían según industria y ticket promedio.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-spacer" style="background: #f8f9fa;">
+            <div class="section-content">
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">Preguntas Frecuentes</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cómo funciona la prueba?</div>
+                        <div class="faq-answer">Accedes inmediatamente a toda la plataforma por 14 días. No necesitas tarjeta de crédito. Si decides continuar, eliges tu plan al finalizar la prueba.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué incluye el soporte prioritario?</div>
+                        <div class="faq-answer">Respuesta en menos de 4 horas, acceso directo a especialistas, y soporte tanto técnico como estratégico para optimizar tus campañas.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puedo cambiar de plan luego?</div>
+                        <div class="faq-answer">Sí, puedes actualizar tu plan en cualquier momento. Si cambias de mensual a anual, se prorratea el tiempo restante.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué tan rápido puedo lanzar campañas?</div>
+                        <div class="faq-answer">Con nuestro setup inicial, puedes tener tus primeras campañas corriendo en 24-48 horas. Incluye configuración técnica y estrategia inicial.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta section-spacer">
+            <div class="section-content">
+                <h2>Ahorra ~$398 vs mensual + stack de bonos pro</h2>
+                <p>El plan anual te da acceso completo a herramientas premium y consultoría especializada.</p>
+                
+                <div class="final-cta-buttons">
+                    <button class="btn-white" data-plan="annual">Quiero el Anual Escala+</button>
+                    <button class="btn-outline">Agendar demo</button>
+                </div>
+                
+                <p style="font-size: 0.9rem; opacity: 0.8;">No ofrecemos devoluciones de dinero.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modales -->
+    <!-- Modal Comparación -->
+    <div id="comparisonModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Comparar Planes</div>
+                <button class="modal-close" onclick="closeComparisonModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Funciones</th>
+                            <th>Prueba 14 días</th>
+                            <th>Mensual con Bonos</th>
+                            <th class="highlight">Anual Escala+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left; font-weight: 600;">Precio</td>
+                            <td>$0</td>
+                            <td>$199/mes</td>
+                            <td class="highlight">$1,990/año</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Shopify + Meta Ads + Dashboard</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Segmentos inteligentes</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">WhatsApp API</td>
+                            <td>Limitado</td>
+                            <td>✓</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Módulo WhatsApp Marketing</td>
+                            <td>—</td>
+                            <td>✓</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Análisis CRO</td>
+                            <td>—</td>
+                            <td>✓</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Curso Google Ads</td>
+                            <td>—</td>
+                            <td>Básico</td>
+                            <td class="highlight">Básico + Pro</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Theme Pro Shopify</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Consultoría mensual</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Flujos WhatsApp hechos</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td class="highlight">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Soporte</td>
+                            <td>Onboarding</td>
+                            <td>Estándar</td>
+                            <td class="highlight">Prioritario</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="text-align: center; color: #666; margin-top: 1.5rem; font-size: 0.9rem;">No ofrecemos devoluciones de dinero.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Curso -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Temario del Curso Google Ads</div>
+                <button class="modal-close" onclick="closeCourseModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 1rem;">Curso Básico (Plan Mensual)</h4>
+                    <ul style="color: #666; line-height: 1.6;">
+                        <li>• Fundamentos de Google Ads para E-Commerce</li>
+                        <li>• Configuración de campañas de búsqueda</li>
+                        <li>• Investigación de palabras clave</li>
+                        <li>• Estructuración de grupos de anuncios</li>
+                        <li>• Configuración de conversiones</li>
+                        <li>• Optimización básica de campañas</li>
+                    </ul>
+                </div>
+                
+                <div style="border-top: 1px solid #eee; padding-top: 2rem;">
+                    <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 1rem;">Curso Pro (Plan Anual) - Incluye todo lo anterior más:</h4>
+                    <ul style="color: #666; line-height: 1.6;">
+                        <li>• Campañas de Shopping avanzadas</li>
+                        <li>• Estrategias de remarketing</li>
+                        <li>• Campañas de Display y YouTube</li>
+                        <li>• Automatización y scripts</li>
+                        <li>• Análisis avanzado y atribución</li>
+                        <li>• Integración con Google Analytics 4</li>
+                        <li>• Optimización para móviles</li>
+                        <li>• Estrategias de licitación inteligente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Datapify</h3>
+                <p>Supercarga tu marketing con IA y automatización inteligente.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="caso-estudio.html">Caso de Estudio</a></li>
+                    <li><a href="acerca.html">Acerca de</a></li>
+                    <li><a href="afiliados.html">Afiliados</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="terminos.html">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: hola@datapify.com</p>
+                <p>WhatsApp: +56 9 1234 5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Datapify. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        function togglePresentationMode() {
+            document.documentElement.classList.toggle('presentation-mode');
+        }
+
+        function openComparisonModal() {
+            document.getElementById('comparisonModal').classList.add('show');
+        }
+
+        function closeComparisonModal() {
+            document.getElementById('comparisonModal').classList.remove('show');
+        }
+
+        function openCourseModal() {
+            document.getElementById('courseModal').classList.add('show');
+        }
+
+        function closeCourseModal() {
+            document.getElementById('courseModal').classList.remove('show');
+        }
+
+        // Cerrar modales al hacer clic fuera
+        document.getElementById('comparisonModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeComparisonModal();
+            }
+        });
+
+        document.getElementById('courseModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCourseModal();
+            }
+        });
+
+        // Manejo de CTAs
+        document.querySelectorAll('[data-plan]').forEach(button => {
+            button.addEventListener('click', function() {
+                const plan = this.getAttribute('data-plan');
+                console.log('Plan seleccionado:', plan);
+                // Aquí se integraría con el sistema de checkout
+                fbq('track', 'Lead', {
+                    content_name: plan,
+                    value: plan === 'trial' ? 0 : (plan === 'monthly' ? 199 : 1990),
+                    currency: 'USD'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
