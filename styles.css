@@ -2398,7 +2398,7 @@ body.loaded {
 
 .stat-label {
     font-size: 14px;
-    color: var(--text-white);
+    color: var(--text-dark);
     opacity: 0.8;
 }
 
