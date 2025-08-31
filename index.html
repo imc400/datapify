@@ -38,6 +38,19 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
+    <!-- Banner de Urgencia -->
+    <div class="urgency-banner" onclick="trackUrgencyClick()">
+        <div class="urgency-banner-content">
+            <span class="urgency-icon">⚡</span>
+            <div class="urgency-text">
+                <span>Últimos</span>
+                <span class="urgency-highlight">3 cupos gratis</span>
+                <span>disponibles</span>
+            </div>
+            <div class="urgency-cta">Reservar Ahora</div>
+        </div>
+    </div>
+
     <!-- Encabezado Fijo -->
     <header class="header" id="header">
         <nav class="nav-container">
@@ -571,6 +584,34 @@
                     event_label: 'Floating Button',
                     page_title: document.title
                 });
+            }
+        }
+
+        function trackUrgencyClick() {
+            // Tracking de Meta Pixel para Banner de Urgencia
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Urgency Banner Click - Free Spots',
+                    content_category: 'urgency_conversion',
+                    value: 199,
+                    currency: 'USD'
+                });
+            }
+            
+            // Google Analytics event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    event_category: 'Urgency Banner',
+                    event_label: 'Free Spots CTA',
+                    page_title: document.title
+                });
+            }
+
+            // Abrir modal de calificación
+            const modal = document.getElementById('qualification-modal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             }
         }
     </script>

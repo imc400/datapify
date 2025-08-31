@@ -38,6 +38,19 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
+    <!-- Banner de Urgencia -->
+    <div class="urgency-banner" onclick="trackUrgencyClick()">
+        <div class="urgency-banner-content">
+            <span class="urgency-icon">💰</span>
+            <div class="urgency-text">
+                <span>Últimas</span>
+                <span class="urgency-highlight">48 horas</span>
+                <span>para afiliarte</span>
+            </div>
+            <div class="urgency-cta">Unirse Ya</div>
+        </div>
+    </div>
+
     <header class="header" id="header">
         <nav class="nav-container">
             <div class="logo">
@@ -581,6 +594,32 @@
                     event_label: 'Floating Button - Afiliados Page',
                     page_title: document.title
                 });
+            }
+        }
+
+        function trackUrgencyClick() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Urgency Banner Click - Affiliate Program',
+                    content_category: 'affiliate_urgency',
+                    value: 500,
+                    currency: 'USD'
+                });
+            }
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    event_category: 'Urgency Banner',
+                    event_label: 'Join Affiliate CTA',
+                    page_title: document.title
+                });
+            }
+
+            // Abrir modal de calificación específico de esta página
+            const modal = document.getElementById('qualification-modal-afiliados');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             }
         }
     </script>
