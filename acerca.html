@@ -442,7 +442,7 @@
             }
             
             // Event listeners para abrir modal (solo los botones de esta página)
-            const ctaButtons = document.querySelectorAll('.cta-button');
+            const ctaButtons = document.querySelectorAll('.cta-button, .plan-button, .cta-button-secondary');
             ctaButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
