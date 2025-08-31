@@ -38,19 +38,6 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
-    <!-- Banner de Urgencia -->
-    <div class="urgency-banner" onclick="trackUrgencyClick()">
-        <div class="urgency-banner-content">
-            <span class="urgency-icon">🔥</span>
-            <div class="urgency-text">
-                <span>Últimos</span>
-                <span class="urgency-highlight">2 cupos gratis</span>
-                <span>para onboarding</span>
-            </div>
-            <div class="urgency-cta">Reservar Demo</div>
-        </div>
-    </div>
-
     <!-- Encabezado Fijo -->
     <header class="header" id="header">
         <nav class="nav-container">
@@ -579,33 +566,6 @@
             }
         }
 
-        function trackUrgencyClick() {
-            // Tracking de Meta Pixel para Banner de Urgencia
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'InitiateCheckout', {
-                    content_name: 'Urgency Banner Click - About Page Onboarding',
-                    content_category: 'urgency_conversion',
-                    value: 199,
-                    currency: 'USD'
-                });
-            }
-            
-            // Google Analytics event
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'click', {
-                    event_category: 'Urgency Banner',
-                    event_label: 'Onboarding CTA - About Page',
-                    page_title: document.title
-                });
-            }
-
-            // Abrir modal de calificación específico de esta página
-            const modal = document.getElementById('qualification-modal-about');
-            if (modal) {
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
-        }
     </script>
 </body>
 </html>

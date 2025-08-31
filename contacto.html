@@ -38,19 +38,6 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
-    <!-- Banner de Urgencia -->
-    <div class="urgency-banner" onclick="trackUrgencyClick()">
-        <div class="urgency-banner-content">
-            <span class="urgency-icon">📩</span>
-            <div class="urgency-text">
-                <span>Últimos</span>
-                <span class="urgency-highlight">5 cupos gratis</span>
-                <span>disponibles hoy</span>
-            </div>
-            <div class="urgency-cta">Contactar Ahora</div>
-        </div>
-    </div>
-
     <header class="header" id="header">
         <nav class="nav-container">
             <div class="logo">
@@ -329,32 +316,6 @@
             }
         }
 
-        function trackUrgencyClick() {
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'InitiateCheckout', {
-                    content_name: 'Urgency Banner Click - Contact Page',
-                    content_category: 'urgency_conversion',
-                    value: 199,
-                    currency: 'USD'
-                });
-            }
-            
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'click', {
-                    event_category: 'Urgency Banner',
-                    event_label: 'Contact Now CTA',
-                    page_title: document.title
-                });
-            }
-
-            // Enfocar en el formulario de contacto
-            const form = document.getElementById('contact-form');
-            if (form) {
-                form.scrollIntoView({ behavior: 'smooth' });
-                const firstInput = form.querySelector('input');
-                if (firstInput) firstInput.focus();
-            }
-        }
     </script>
 </body>
 </html>
